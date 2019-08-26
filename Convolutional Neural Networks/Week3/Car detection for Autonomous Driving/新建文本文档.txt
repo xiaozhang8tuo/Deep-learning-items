@@ -1,0 +1,21 @@
+YOLO相关
+Input image (608, 608, 3)
+The input image goes through a CNN, resulting in a (19,19,5,85) dimensional output.
+After flattening the last two dimensions, the output is a volume of shape (19, 19, 425):
+    Each cell in a 19x19 grid over the input image gives 425 numbers.
+    425 = 5 x 85 because each cell contains predictions for 5 boxes, corresponding to 5 anchor boxes, as seen in lecture.
+    85 = 5 + 80 where 5 is because  (pc,bx,by,bh,bw)(pc,bx,by,bh,bw)  has 5 numbers, and and 80 is the number of classes we'd like to detect
+You then select only few boxes based on:
+    Score-thresholding: throw away boxes that have detected a class with a score less than the threshold
+    Non-max suppression: Compute the Intersection over Union and avoid selecting overlapping boxes
+This gives you YOLO's final output.
+
+
+YOLO是一种最先进的快速、准确的目标检测模型
+它通过CNN运行一个输入图像，CNN输出一个19x19x5x85维的卷。
+    编码可以看作是一个网格，其中每个19x19单元格包含大约5个框的信息。
+您可以使用非最大抑制来过滤所有的框。具体地说:
+    对检测类的概率进行阈值化，只保留精确的(高概率)框
+    交叉联合(IoU)阈值消除重叠框
+由于从随机初始化的权值训练YOLO模型并不简单，并且需要很大的数据集和大量的计算，
+所以我们在这个练习中使用了以前训练过的模型参数。如果您愿意，您还可以尝试使用您自己的数据集微调YOLO模型，尽管这将是一个相当重要的练习。

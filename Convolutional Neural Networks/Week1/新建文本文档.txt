@@ -1,0 +1,2 @@
+numpy实现cnn 
+conv pooling softmax 等的求导
