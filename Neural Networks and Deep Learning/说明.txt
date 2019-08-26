@@ -1,0 +1,14 @@
+﻿1 Basics With Numpy v3   
+基础函数（sigmoid，softmax） 向量化（np.dot multiply outer）
+
+
+2 Logistic Regression with a Neural Network mindset v5 
+基本网络（无隐层）的结构  initialize(), propagate(), optimize()， model().
+
+3 Planar data classification with one hidden layer v5
+一个隐层的NN的构建过程    forward 4 backward 6
+
+4 Building your Deep Neural Network  Step by Step v8
+
+5 Deep Neural Network - Application v8
+自己搭N隐层网络
