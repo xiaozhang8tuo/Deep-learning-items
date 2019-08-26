@@ -1,0 +1,14 @@
+﻿1Initialization
+随机参数初始化 0 randn /sqrt(2/layers)
+
+2Regularization - v2
+正则化和dropout
+
+3Gradient+Checking v1
+梯度检验
+
+4Optimization+methods
+gd momentum adam 算法更新参数
+
+5Tensorflow+Tutorial
+tf基本教程会话等，tf搭3层网络
